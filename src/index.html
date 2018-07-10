@@ -1,0 +1,142 @@
+<DOCTYPE! html>
+
+<html>
+
+<style>
+body {
+   align-self: center;
+   background: #91bbff;
+   display: flex;
+   width: 100%;
+ }
+
+ form {
+   align-items: center;
+   border: 1px solid black;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   padding: 1.5%;
+ }
+
+ .survey-row {
+   display: flex;
+   margin: 2%;
+   justify-content: space-between;
+   width: 95%;
+ }
+
+ #dietary-choices, #city-choices {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+ .dietary-label {
+   width: 50%;
+ }
+
+ .dietary-choice {
+   width: 40%;
+ }
+
+ .city {
+   width: 40%;
+ }
+
+ textarea {
+   width: 100%;
+   height: 50px;
+ }
+
+</style>
+
+<head>
+
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">
+      Please fill out the following survey for the family reunion.
+  </p>
+  <form id="survey-form">
+    <div class="survey-row">
+      <label id="name-label">Name: </label>
+      <input id="name" type="text" placeholder="Please enter your name" required="true" />
+    </div>
+    <div class="survey-row">
+      <label id="email-label">Email: </label>
+      <input id="email" type="email" placeholder="Please enter your email" required="true" />
+    </div>
+    <div class="survey-row">
+      <label id="number-label">Age: </label>
+      <input id="number" type="number" min="0" max="121" placeholder="Please enter your age" required="true" />
+    </div>
+
+    <div class="survey-row">
+      <label id="date-dropdown-label">Date: </label>
+      <select id="dropdown" required="true">
+        <option disabled value>Please select a date.
+        </option>
+        <option value="05/31/19">
+          May 31, 2019
+        </option>
+        <option value="07/31/19">
+          July 31, 2019
+        </option>
+        <option value="09/31/19">
+          September 31, 2019
+        </option>
+      </select>
+    </div>
+
+    <div id="dietary-section">
+      <p>
+        Let us know if you have any dietary restrictions.
+      </p>
+      <div class="survey-row" id="dietary-choices">
+          <label class="dietary-label">None
+          <input class="dietary-choice" type="radio" name="radio-buttons" value="None" checked/></label>
+          <label class="dietary-label">Vegetarian
+          <input class="dietary-choice" type="radio" name="radio-buttons" value="Vegetarian"/></label>
+          <label class="dietary-label">Vegan
+          <input class="dietary-choice" type="radio" name="radio-buttons" value="Vegan"/></label>
+          <label class="dietary-label">Gluten Free
+          <input class="dietary-choice" type="radio" name="radio-buttons" value="Gluten Free"/></label>
+      </div>
+    </div>
+
+    <div id="city-section">
+      <p>
+        Let us know which cities you are interested in having the reunion.
+      </p>
+      <div class="survey-row" id="city-choices">
+        <label class="city">Jacksonville</label>
+        <input class="city" type="checkbox" value="Jacksonville"/>
+        <label class="city">Charleston</label>
+        <input class="city" type="checkbox" value="Charleston"/>
+        <label class="city">Rock Hill</label>
+        <input class="city" type="checkbox" value="Rock Hill"/>
+        <label class="city">Washington, D.C.</label>
+        <input class="city" type="checkbox" value="Washington, D.C."/>
+      </div>
+    </div>
+    <div class="survey-row" id="city-choices">
+      <p>Let us know if you have additional feedback!</p>
+      <textarea>Enter comments here.</textarea>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
